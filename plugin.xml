@@ -1,0 +1,30 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.karamsawalha.azureupload"
+    version="1.0.0">
+    <name>AzureBackgroundUpload</name>
+    <description>Cordova plugin for background file upload to Azure Blob Storage</description>
+    <license>Apache 2.0</license>
+
+    <js-module src="www/AzureBackgroundUpload.js" name="AzureBackgroundUpload">
+        <clobbers target="AzureBackgroundUpload" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+        </config-file>
+    </platform>
+
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>Need access to photo library for uploading files.</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>Need access to camera for uploading files.</string>
+        </config-file>
+        <source-file src="src/ios/AzureBackgroundUpload.swift" framework="true" />
+    </platform>
+</plugin>
