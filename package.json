@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-azure-background-upload",
+  "version": "1.0.0",
+  "description": "A Cordova plugin for background file uploads to Azure Blob Storage.",
+  "cordova": {
+    "id": "com.karamsawalha.azureupload",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "azure",
+    "upload",
+    "background"
+  ],
+  "author": "Karam Sawalha",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "cordova-android": "^11.0.0",
+    "cordova-ios": "^6.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksawalha/AzureBackgroundUpload.git"
+  },
+  "engines": {
+    "cordova": ">=11.0.0"
+  }
+}
